@@ -33,16 +33,16 @@ require.config({
         }
     },
     // urlArgs:'v=' + (new Date()).getTime(),
-    waitSeconds: 15
+    waitSeconds: 10
 });
-let urlArgs = 'v=' + (new Date()).getTime()
+
 require([
     'jquery',
     'lodash',
     'locales',
     'handlebarsExtended',
-    `./api_project.js?${urlArgs}`,
-    `./api_data.js?${urlArgs}`,
+    `./api_project.js?${buildConfig.version}`,
+    `./api_data.js?${buildConfig.version}`,
     'prettify',
     'utilsSampleRequest',
     'semver',

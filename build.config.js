@@ -1,0 +1,1 @@
+var buildConfig = { "version": 'v=' + (new Date()).getTime(), "maxage": 604800000, "name": "前端版本配置信息" };

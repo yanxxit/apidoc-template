@@ -10,6 +10,7 @@
   <link href="css/style.css" rel="stylesheet" media="screen, print">
   <link href="img/favicon.ico" rel="icon" type="image/x-icon">
   <script src="vendor/polyfill.js"></script>
+  <script src="build.config.js"></script>
 </head>
 <body>
 
@@ -103,7 +104,7 @@
 <script id="template-article" type="text/x-handlebars-template">
   <article id="api-{{article.group}}-{{article.name}}-{{article.version}}" {{#if hidden}}class="hide"{{/if}} data-group="{{article.group}}" data-name="{{article.name}}" data-version="{{article.version}}">
     <div class="pull-left">
-      <h1>{{article.groupTitle}}{{#if article.title}} - {{article.title}}{{/if}}</h1>
+      <a href="#api-{{article.group}}-{{article.name}}"><h1>{{article.groupTitle}}{{#if article.title}} - {{article.title}}{{/if}}</h1></a>
     </div>
     {{#if template.withCompare}}
     <div class="pull-right">
