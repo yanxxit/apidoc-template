@@ -1,6 +1,5 @@
 define([
     './locales/es.js',
-    './locales/zh.js',
     './locales/zh_cn.js'
 ], function() {
     var langId = (navigator.language || navigator.userLanguage).toLowerCase().replace('-', '_');
