@@ -11,7 +11,8 @@ require.config({
         prettify: './vendor/prettify/prettify',
         semver: './vendor/semver.min',
         utilsSampleRequest: './utils/send_sample_request',
-        webfontloader: './vendor/webfontloader',
+        // webfontloader: './vendor/webfontloader',//谷歌字体
+        // webfontloader: 'https://lib.baomitu.com/webfont/1.6.28/webfontloader',//谷歌字体
         list: './vendor/list.min'
     },
     shim: {
@@ -46,14 +47,14 @@ require([
     'prettify',
     'utilsSampleRequest',
     'semver',
-    'webfontloader',
+    // 'webfontloader',//谷歌字体
     'bootstrap',
     'pathToRegexp',
     'list'
 ], function ($, _, locale, Handlebars, apiProject, apiData, prettyPrint, sampleRequest, semver, WebFont) {
 
     // load google web fonts
-    loadGoogleFontCss();
+    // loadGoogleFontCss();//谷歌字体
 
     var api = apiData.api;
 
