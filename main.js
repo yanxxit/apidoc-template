@@ -56,7 +56,11 @@ require([
     // load google web fonts
     // loadGoogleFontCss();//谷歌字体
 
-    var api = apiData.api;
+    var api = apiData.api.map(m => {    
+        m.group = m.group.replace(/[`~!@#$%^&*()\-+=<>?:"{}|,.\/;'\\[\]·~！@#￥%……&*（）——\-+={}|《》？：“”【】、；‘'，。、]/g, "_");
+        m.name = m.name.replace(/[`~!@#$%^&*()\-+=<>?:"{}|,.\/;'\\[\]·~！@#￥%……&*（）——\-+={}|《》？：“”【】、；‘'，。、]/g, "_");
+        return m;
+    })
 
     //
     // Templates
